@@ -1,28 +1,23 @@
 import math
-"""
-calculator.py
-- Defines functions used to create a simple calculator
-
-One function per operation, in order.
-"""
-# First example
+def square_root(a):
+    try:
+        return math.sqrt(a)
+    except ValueError:
+        return "Error: Cannot take square root of a negative number"
+def hypotenuse(a, b):
+    return math.hypot(a, b)
 def add(a, b): 
     return a + b
-def subtract(a, b):
+def sub(a, b):
     return a - b
-def multiply(a, b):
+def mul(a, b):
     return a*b
-def divide(a, b):
-    try:
-        return b/a
-    except ZeroDivisionError:
-        return "Cannot divide by 0"
-def logarithm(a, b):
+def log(a, b):
     try:
         return math.log(a, b)
     except ValueError:
         return "Error: Cannot log a negative number"
-def exponent(a, b):
+def exp(a, b):
     return a**b
 
 

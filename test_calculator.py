@@ -49,15 +49,15 @@ class TestCalculator(unittest.TestCase):
     ######## Partner 1
     def test_log_invalid_argument(self): # 1 assertion
         with self.assertRaises(ValueError):
-            log(0, 5)
+            logarithm(0, 5)
 
     def test_hypotenuse(self): # 3 assertions
         self.assertEqual(hypotenuse(3, 4), 5)
         self.assertEqual(hypotenuse(6, 8), 10)
-        self.assertEqual(hypotenuse(1, 1), 1)
+        self.assertEqual(hypotenuse(12, 16), 20)
 
     def test_sqrt(self): # 3 assertions
-        with self.assertRaises(square_root(ValueError)):
+        with self.assertRaises(ValueError):
             square_root(-1)
         self.assertEqual(square_root(25), 5)
         self.assertEqual(square_root(100), 10)

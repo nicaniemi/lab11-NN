@@ -3,8 +3,8 @@ import math
 def square_root(a):
     try:
         return math.sqrt(a)
-    except ValueError:
-        return "Error: Cannot take square root of a negative number"
+    except ValueError as e:
+        raise e
 def hypotenuse(a, b):
     return math.hypot(a, b)
 def add(a, b): 
@@ -16,13 +16,13 @@ def mul(a, b):
 def div(a, b):
     try:
         return b/a
-    except ZeroDivisionError:
-        return "Cannot divide by 0"
+    except ZeroDivisionError as e:
+        raise e
 def logarithm(a, b):
     try:
         return math.log(a, b)
-    except ValueError:
-        return "Error: Cannot log a negative number"
+    except ValueError as e:
+        raise e
 def exp(a, b):
     return a**b
 
